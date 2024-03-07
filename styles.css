@@ -1,0 +1,110 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(213, 232, 248);
+  font-family: Arial, Helvetica, sans-serif;
+  color: teal;
+}
+
+ul {
+  list-style: none;
+}
+
+ul > li {
+  margin: 10px 0px;
+}
+
+.btn,
+.disabledBtn {
+  padding: 12px 24px;
+  margin: 0 5px;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.disabledBtn {
+  background-color: #fff;
+  color: grey;
+  cursor: initial;
+  border: 1px solid grey;
+}
+
+.btn {
+  background-color: teal;
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid teal;
+}
+
+.btn:hover {
+  background-color: #fff;
+  border: 1px solid teal;
+  color: teal;
+}
+
+.resetBtn {
+  margin: 10px 0;
+}
+
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.wrapper .title {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.wrapper .main-content {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrapper .main-content .result-container {
+  border: 2px solid teal;
+  border-radius: 5px;
+  padding: 10px 20px;
+  width: 400px;
+  max-width: 100%;
+  min-height: 100px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.wrapper .main-content .result-container .result {
+  margin: 10px;
+}
+
+.wrapper .main-content .result-container .result-win,
+.wrapper .main-content .result-container .result-lose {
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.wrapper .main-content .result-container .result-win {
+  background-color: green;
+}
+.wrapper .main-content .result-container .result-lose {
+  background-color: red;
+}
+
+.wrapper .main-content .btn-container {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.wrapper .main-content .btn-container p {
+  margin-bottom: 10px;
+}
+
+.wrapper .main-content .play-round {
+  margin-top: 30px;
+}

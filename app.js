@@ -63,9 +63,11 @@ function updateScores(result) {
 function determineWinner() {
   if (playerScore === 5 || compScore === 5) {
     if (playerScore > compScore) {
+      resultEl.classList.add("result-win");
       resultEl.textContent = "Congrats! Player has WON the game.";
       setGameOver();
     } else {
+      resultEl.classList.add("result-lose");
       resultEl.textContent = "You LOSE the game.";
       setGameOver();
     }
@@ -75,8 +77,11 @@ function determineWinner() {
 function setGameOver() {
   for (btn of btns) {
     btn.disabled = true;
+    btn.classList.add("disabledBtn");
+    btn.classList.remove("btn");
   }
   resetButton = document.createElement("button");
+  resetButton.classList.add("btn", "resetBtn");
   resetButton.textContent = "Start new game";
   btnContainerEl.after(resetButton);
   resetButton.addEventListener("click", resetGame);
@@ -85,8 +90,12 @@ function setGameOver() {
 function resetGame() {
   for (btn of btns) {
     btn.disabled = false;
+    btn.classList.add("btn");
+    btn.classList.remove("disabledBtn");
   }
   playRoundEl.textContent = "";
+  resultEl.textContent = "";
+  resultEl.classList.remove("result-win", "result-lose");
   playerScore = 0;
   playerScoreEl.textContent = 0;
   compScore = 0;
